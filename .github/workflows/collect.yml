@@ -1,0 +1,70 @@
+name: collect
+
+on:
+  schedule:
+    - cron: '5,35 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weather-data-collection
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+
+      - name: 이전 관측자료 복원
+        shell: bash
+        run: |
+          if git ls-remote --exit-code --heads origin data >/dev/null 2>&1; then
+            git fetch origin data:refs/remotes/origin/data
+            if git cat-file -e origin/data:data/observations.json 2>/dev/null; then
+              git show origin/data:data/observations.json > data/observations.json
+            fi
+          fi
+
+      - name: 의정부·신곡 기상자료 수집
+        env:
+          GG_DATA_KEY: ${{ secrets.GG_DATA_KEY }}
+        run: python3 scripts/collect.py
+
+      - name: 관측자료 점검
+        id: validate
+        continue-on-error: true
+        run: python3 scripts/check_data.py
+
+      - name: JSON을 data 브랜치에 저장
+        shell: bash
+        run: |
+          staging_dir=$(mktemp -d)
+          cp -R data "$staging_dir/data"
+          git restore --worktree --staged -- data
+          if git show-ref --verify --quiet refs/remotes/origin/data; then
+            git switch -C data origin/data
+          else
+            git switch --orphan data
+          fi
+          mkdir -p data
+          cp "$staging_dir/data/"*.json data/
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update weather observations'
+            git push origin HEAD:data
+          fi
+
+      - name: 수집 점검 결과 반영
+        if: steps.validate.outcome == 'failure'
+        run: |
+          echo '::error::수집 결과 확인이 필요합니다. 앞의 수집·점검 단계와 Summary를 확인하세요. 기존 관측자료는 보존했습니다.'
+          exit 1
