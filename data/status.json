@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "generatedAt": null,
+  "lastAttemptAt": null,
+  "rowCount": 0,
+  "message": "아직 수집 전입니다. collect를 실행하세요.",
+  "stations": []
+}

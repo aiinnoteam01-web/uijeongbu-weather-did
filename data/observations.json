@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "source": "경기데이터드림 AWS 시간별 관측현황",
+  "generatedAt": null,
+  "lastAttemptAt": null,
+  "ok": false,
+  "error": "아직 수집 전입니다. GitHub Actions에서 collect를 실행하세요.",
+  "rows": []
+}
