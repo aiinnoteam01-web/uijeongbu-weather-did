@@ -1,18 +1,18 @@
 {
   "schemaVersion": 1,
   "ok": true,
-  "lastAttemptAt": "2026-11-07T23:14:31.735635+09:00",
-  "generatedAt": "2026-11-07T23:14:31.735635+09:00",
+  "lastAttemptAt": "2026-11-08T00:09:49.011686+09:00",
+  "generatedAt": "2026-11-08T00:09:49.011686+09:00",
   "rowCount": 94,
   "message": "",
   "stations": [
     {
       "name": "의정부",
-      "observedAt": "2026-11-07T22:00:00+09:00"
+      "observedAt": "2026-11-07T23:00:00+09:00"
     },
     {
       "name": "신곡",
-      "observedAt": "2026-11-07T22:00:00+09:00"
+      "observedAt": "2026-11-07T23:00:00+09:00"
     }
   ]
 }
