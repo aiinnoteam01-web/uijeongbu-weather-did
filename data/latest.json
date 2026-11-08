@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T12:44:42.063503+09:00",
+  "generatedAt": "2026-11-08T13:45:14.218779+09:00",
   "rows": [
     {
       "SIGUN_NM": "의정부시",
@@ -8,17 +8,17 @@
       "SPOT_NM": "의정부",
       "LEGALDONG_NM": "경기도 의정부시 용현동",
       "MESURE_DE": "20261108",
-      "MESURE_TM": "12",
+      "MESURE_TM": "13",
       "WGS84_LAT": 37.7348,
       "WGS84_LOGT": 127.0735,
       "HT_INFO": "89.49",
-      "WD_INFO": "336.8",
-      "WS_INFO": "0.5",
-      "TP_INFO": "4.6",
-      "HD_INFO": "74.0",
-      "LOCTN_ATM_INFO": "1024.2",
-      "WTRLVL_ATM_INFO": "1035.5",
-      "RAINF_YN_INFO": "10",
+      "WD_INFO": "64.9",
+      "WS_INFO": "0.8",
+      "TP_INFO": "5.3",
+      "HD_INFO": "67.6",
+      "LOCTN_ATM_INFO": "1023.1",
+      "WTRLVL_ATM_INFO": "1034.3",
+      "RAINF_YN_INFO": "0",
       "RAINF_1HR_INFO": "0.0",
       "RAINF_DAY_INFO": "0.5"
     },
@@ -29,19 +29,19 @@
       "SPOT_NM": "신곡",
       "LEGALDONG_NM": "경기도 의정부시 신곡동",
       "MESURE_DE": "20261108",
-      "MESURE_TM": "12",
+      "MESURE_TM": "13",
       "WGS84_LAT": 37.7487,
       "WGS84_LOGT": 127.0718,
       "HT_INFO": "52.95",
-      "WD_INFO": "0.0",
-      "WS_INFO": "0.0",
-      "TP_INFO": "4.0",
-      "HD_INFO": "79.2",
+      "WD_INFO": "107.4",
+      "WS_INFO": "0.1",
+      "TP_INFO": "4.5",
+      "HD_INFO": "83.1",
       "LOCTN_ATM_INFO": "-997",
       "WTRLVL_ATM_INFO": "-999",
       "RAINF_YN_INFO": "-992",
       "RAINF_1HR_INFO": "0.5",
-      "RAINF_DAY_INFO": "1.0"
+      "RAINF_DAY_INFO": "1.5"
     }
   ]
 }
