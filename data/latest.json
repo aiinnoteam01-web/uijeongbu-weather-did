@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T18:25:19.194011+09:00",
+  "generatedAt": "2026-11-11T19:27:42.211442+09:00",
   "rows": [
     {
       "SIGUN_NM": "의정부시",
@@ -29,14 +29,14 @@
       "SPOT_NM": "신곡",
       "LEGALDONG_NM": "경기도 의정부시 신곡동",
       "MESURE_DE": "20261111",
-      "MESURE_TM": "18",
+      "MESURE_TM": "19",
       "WGS84_LAT": 37.7487,
       "WGS84_LOGT": 127.0718,
       "HT_INFO": "52.95",
-      "WD_INFO": "148.5",
-      "WS_INFO": "0.1",
-      "TP_INFO": "10.1",
-      "HD_INFO": "70.9",
+      "WD_INFO": "0.0",
+      "WS_INFO": "0.0",
+      "TP_INFO": "8.6",
+      "HD_INFO": "78.8",
       "LOCTN_ATM_INFO": "-997",
       "WTRLVL_ATM_INFO": "-999",
       "RAINF_YN_INFO": "-992",
